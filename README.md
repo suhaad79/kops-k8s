@@ -78,15 +78,19 @@ You Created. --> Save.
 
     # Add env variables in bashrc
     vi .bashrc
+    copy and paste the below 2 lines export commands to set your variables and refresh with the source.bashrc. you can echo $NAME or echo KOPS_STATE_STORE to confirm on your CLI
 	
 	# Give Unique Name And S3 Bucket which you created.
 	export NAME=class.k8s.local
 	export KOPS_STATE_STORE=s3://class29v
  
     source .bashrc
+    
+    #you can run=  aws s3 ls s3://class29v to view the content of your bucket
 	
 # 7) Create sshkeys before creating cluster
-
+#enter the below command and hit the enter button until its done creating
+    
     ssh-keygen
  
 
@@ -100,7 +104,7 @@ You Created. --> Save.
 
 	 kops update cluster ${NAME} --yes
 
-# 10) Validate your cluster(KOPS will take some time to create cluster ,Execute below commond after 3 or 4 mins)
+# 10) Validate your cluster(KOPS will take some time to create cluster ,Execute below commond after 10 mins)
 
 	   kops validate cluster
 	   
