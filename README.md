@@ -107,6 +107,8 @@ You Created. --> Save.
 # 10) Validate your cluster(KOPS will take some time to create cluster ,Execute below commond after 10 mins)
 
 	   kops validate cluster
+	   or 
+	   kops export kubecfg --admin  #if you had installed kubeadm on your kops 
 	   
 	   Suggestions:
  * validate cluster: kops validate cluster --wait 10m
